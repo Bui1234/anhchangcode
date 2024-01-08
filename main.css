@@ -1,0 +1,60 @@
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+.dark
+{
+  background-color: black;
+}
+label
+{
+  position: relative;
+}
+input
+{
+  width: 70px;
+  height: 30px;
+  appearance: none;
+  outline: none;
+  background-color: brown;
+  border: 2px solid aqua;
+  border-radius: 15px;
+  position: relative;
+  z-index: -1;
+}
+.sun
+{
+  position: absolute;
+  top: 19%;
+  left: 10%;
+  font-size: 20px;
+  color: white;
+}
+.moon
+{
+  position: absolute;
+  top: 19%;
+  right: 10%;
+  font-size: 20px;
+}
+input::before
+{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input:checked::before
+{
+  left: 0%;
+}
