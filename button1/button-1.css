@@ -1,0 +1,137 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.wraper
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+.wraper a
+{
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 20px 60px;
+  margin: 0 10px;
+  color: aqua;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.wraper a:hover
+{
+  background: aqua;
+  color: #000;
+  box-shadow: 0 0 5px aqua,
+                        0 0 25px aqua,
+                        0 0 50px aqua,
+                        0 0 200px aqua;
+                        -webkit-box-reflect:below 1px linear-gradient(90deg,transparent,aqua);
+}
+.wraper a:first-child
+{
+  filter: hue-rotate(215deg);
+}
+.wraper a:last-child
+{
+  filter: hue-rotate(90deg);
+}
+.wraper a span:nth-child(1)
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: -webkit-linear-gradient(360deg,transparent,aqua);
+  animation: altermate-1 1s infinite linear;
+}
+@keyframes altermate-1
+{
+  0%
+  {
+    left: -100%;
+  }
+  100%
+  {
+    left: 100%;
+  }
+}
+.wraper a span:nth-child(2)
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: -webkit-linear-gradient(200deg,transparent,aqua);
+  animation: altermate-2 1s infinite linear;
+  animation-delay: 0.25s;
+}
+@keyframes altermate-2
+{
+  0%
+  {
+    top:-100%
+  }
+  100%
+  {
+    top: 100%;
+  }
+}
+.wraper a span:nth-child(3)
+{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: -webkit-linear-gradient(200deg,transparent,aqua);
+  animation: altermate-3 1s infinite linear;
+  animation-delay: 0.5s;
+}
+@keyframes altermate-3
+{
+  0%
+  {
+    right: -100%;
+  }
+  100%
+  {
+    right: 100%;
+  }
+}
+.wraper a span:nth-child(4)
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: -webkit-linear-gradient(90deg,transparent,aqua);
+  animation: altermate-4 1s infinite linear;
+  animation-delay: 0.75s;
+}
+@keyframes altermate-4
+{
+  0%
+  {
+    bottom: -100%;
+  }
+  100%
+  {
+    bottom: 100%;
+  }
+}
